@@ -39,5 +39,9 @@ let deletedValues = sp.splice(2, 2, 550, 990);
 console.log(sp);//it returns deleted array and modify source array
 console.log(deletedValues);//it returns the deleted values from the array and its type is object
 
-//  slice() ----
-
+//  slice() ---- slice out a pieace fro  an array it creates a new array
+console.log("Slice")
+let newssp = sp.slice(3);//it prints index no 3, upto last 
+console.log(newssp);
+let newsp= sp.slice(3, 4);//it prints index no 3 to 4
+console.log(newsp);
