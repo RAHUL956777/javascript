@@ -21,4 +21,3 @@ console.log(s);//it also modify the original array
 // unshift() - adds elements to the begining and return new array length
 let u = num.unshift(78);
 console.log(u);
-
