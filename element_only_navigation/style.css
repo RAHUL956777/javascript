@@ -1,0 +1,19 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    display: flex;
+    background: gray;
+    height: 35px;
+    margin: 0;
+    padding: 15px ;
+
+}
+li{
+    margin: 0 23px;
+    list-style: none;
+    cursor: pointer;
+}
