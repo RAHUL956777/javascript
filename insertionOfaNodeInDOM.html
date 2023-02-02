@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion of  a node in dom</title>
+</head>
+<body>
+    Start of this container[outer]
+    <div class="container">
+        Start of this container[inner]
+        <div id="first">I am a first element</div>
+        End of this container[inner]
+    </div>
+    End of this container[outer]
+
+    <script>
+        let a = document.getElementsByTagName("div")[0]
+        a.innerHTML = a.innerHTML + "<span>hllo world</span>"
+
+        // new way to add an element ushing javascript
+        let div = document.createElement('div');
+        div.innerHTML = `<h1>It's a new div creating by ushing javascript`;
+            // a.appendChild(div);
+            // a.append(div);
+            // a.prepend(div);
+            // a.before(div);
+            // a.after(div);
+            a.replaceWith(div);
+    </script>
+</body>
+</html>
