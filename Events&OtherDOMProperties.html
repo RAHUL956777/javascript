@@ -6,11 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events and other dom properties</title>
 </head>
-<body>
-    <span>I am span</span>
+<body> 
+    hello world
+    <span id="first">I am span</span>
+    <p id="para"><b>Lorem</b> ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ut.</p>
+    <h1 hidden>hey what's up</h1>
+
+
     <script>
-        console.log(document.getElementsByTagName("span")[0]);
-        console.dir(document.getElementsByTagName("span")[0]);
+        let x = document.getElementsByTagName("span")[0];
+        console.log(x);
+       let y=document.getElementsByTagName("span")[0];//it print span like an object
+        console.dir(y);
+        console.log(document.body.firstChild.nodeName);
+        console.log(document.body.firstElementChild.nodeName);
+
+        // inner html outer html
+        let para = document.getElementById('para');
+        console.log(para.innerHTML)//innerHTML property only valid for element nodes only
+
+        let first = document.getElementById('first')//get outerHTML
+        console.log(first.outerHTML);
+        let newvar = first.outerHTML = "<div>hey</div>"//set outerHTML
+        console.log(newvar);
+
+        console.log(document.body.firstChild);
+        console.log(document.body.firstChild.data);
+        console.log(document.body.firstChild.nodeValue);
+
+        console.log(document.body.textContent);//with this you can copy all the page as a text
+
+       let h1 = document.getElementsByTagName("h1");
+       console.log(h1.hidden = false);
+
+    //    append child
+    const paragraph = document.body.appendChild(document.createElement('p'));
+    console.log(paragraph
+    
+    )
     </script>
 </body>
 </html>
