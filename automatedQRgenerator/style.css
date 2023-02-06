@@ -20,7 +20,7 @@ body {
   border-radius: 1rem;
   transition: height 0.2s ease;
 }
-.wrap .active {
+.wrap.active {
   height: 530px;
 }
 .wrap h1 {
@@ -71,6 +71,6 @@ body {
   justify-content: center;
   border: 1px solid #ccc;
 }
-.wrap .qr-code img {
-  height: 11rem;
-}
+/* .wrap .qr-code img {
+  height: 20px;
+} */
