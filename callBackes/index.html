@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // callbackes
+      function loadScript(src, callback) {
+        var script = document.createElement("script");
+        script.src = src;
+
+        script.onload = function () {
+          console.log("Loaded script with SRC: " + src);
+          callback(src);
+        };
+        document.body.appendChild(script);
+      }
+      script.onerror = function () {
+        console.log("Error Loaded script with SRC: " + src);
+        callback(new Error("Src got some error"));
+      };
+      document.body.appendChild(script);
+
+      function hello(error, src) {
+        console.log("Hello World! " + src);
+      }
+
+      function goodmorning(src) {
+        console.log("Good morning " + src);
+      }
+      loadScript("https://github.com/RAHUL956777", hello);
+
+      // basic callback
+
+      function greeting(name, callback) {
+        console.log(`Hello, ${name}!`);
+        callback();
+      }
+
+      function farewell() {
+        console.log("Goodbye!");
+      }
+
+      greeting("John", farewell);
+    </script>
+  </body>
+</html>
