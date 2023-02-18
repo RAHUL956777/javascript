@@ -33,11 +33,17 @@ let p2 = new Promise((resolve, reject) => {
 console.log(p1);
 console.log(p2);
 
-p1.then((value) => {
-  console.log(value);
-});
+// to get the  value
+p1.then(
+  (value) => {
+    console.log(value);
+  },
+  (error) => {
+    console.log(value);
+  }
+);
 
-
-p2.catch((error) =>{
-  console.log("")
-})
+// to catch the error
+// p2.catch((error) => {
+//   console.log("");
+// });
