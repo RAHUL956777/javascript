@@ -11,3 +11,8 @@ body {
   background: black;
   font-family: "Lato", sans-serif;
 }
+#text {
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
+}
