@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XML request</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: gray;
+      }
+      .card {
+        height: 500px;
+        width: 350px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .card > #avatar {
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card">
+        <img id="avatar" src="" alt="image" />
+        <h1 id="h1"></h1>
+        <h3 id="h3"></h3>
+        <p id="p"></p>
+      </div>
+    </div>
+
+    <script src="xml.js"></script>
+  </body>
+</html>
