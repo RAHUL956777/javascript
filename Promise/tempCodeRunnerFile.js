@@ -1,9 +1,19 @@
-const promiseThree = new Promise((resolve, reject) => {
+const promiseFive = new Promise((resolve, reject) => {
 //   setTimeout(() => {
-//     resolve({ userName: "Rahul", email: "dasr16583@gmail.com" });
+//     let error = true;
+//     if (!error) {
+//       resolve({ userName: "rahul", password: "123" });
+//     } else {
+//       reject("error something went wrong");
+//     }
 //   }, 1000);
 // });
 
-// promiseThree.then((user) => {
-//   console.log(user);
-// });
+// async function consumePromiseFive() {
+//   try {
+//     const res = await promiseFive;
+//     console.log(res);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
