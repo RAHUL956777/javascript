@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <div class="day">Sunday</div>
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday</div>
+    </div>
+  </body>
+  <script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "newDiv";
+    div.id = "newID";
+    div.setAttribute("title", "chai or code");
+    div.style.color="green"
+    div.style.padding="12px"
+
+    // div.innerText = "Hello World";   we try to avoid it because it tooks the reference first then overwrite on it
+
+    // best way
+    const text = document.createTextNode("Hello World");
+    div.appendChild(text);
+
+    document.body.appendChild(div);
+  </script>
+</html>
