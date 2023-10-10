@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: gray">
+    <div class="container">
+      <h1>BMI calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="text" id="height" /></p>
+        <p><label>Weight in Kg:</label><input type="text" id="weight" /></p>
+        <button
+          style="
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+          "
+        >
+          Calculate
+        </button>
+        <div id="results" style="margin: 10px; "></div>
+        <br>
+        <div id="weightguide"></div>
+        <div id="weightGuide"></div>
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>OverWeight = Greater than 24.p</p>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const height = parseInt(document.querySelector("#height").value);
+      const weight = parseInt(document.querySelector("#weight").value);
+      const results = document.querySelector("#results");
+
+      if (height === "" || height < 0 || isNaN(height)) {
+        results.innerHTML = `please give a valid height ${height}`;
+      }
+      else if (weight === "" || weight < 0 || isNaN(weight)) {
+        results.innerHTML = `please give a valid weight ${weight}`;
+      }
+      else{
+        var bmi = (weight / ((height * height) / 10000)).toFixed(2);
+        results.innerHTML = `<span>${bmi}</span>`;
+      }
+
+      const guide = document.querySelector('#weightGuide');
+      if(bmi < 18.6){
+        guide.innerHTML += `Under Weight`;
+      }
+      else if(bmi >= 18.6 && bmi < 24.9){
+        guide.innerHTML += `Normal Range`;
+      }
+      else{
+        guide.innerHTML += `OverWeight`;
+      }
+
+    });
+  </script>
+</html>
