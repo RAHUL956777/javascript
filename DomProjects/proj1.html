@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 70vh;
+            width: 100vw;
+        }
+        .color{
+            height: 30px;
+            width: 40px;
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <span class="color">Red</span>
+    <span class="color">Green</span>
+    <span class="color">Blue</span>
+    <span class="color">Black</span>
+    <span class="color">Yellow</span>
+    <span class="color">Pink</span>
+    <span class="color">gray</span>
+    <span class="color">voilet</span>
+    <span class="color">Purple</span>
+    <span class="color">Brown</span>
+    <span class="color">Orange</span>
+    <span class="color">White</span>
+    <span class="color">Cyan</span>
+    <span class="color">Magenta</span>
+    <span class="color">Lime</span>
+</body>
+    <script>
+        const color = [
+            'red',
+            'green',
+            'blue',
+            'black',
+            'yellow',
+            'pink',
+            'gray',
+            'voilet',
+            'purple',
+            'brown',
+            'orange',
+            'white',
+            'cyan',
+            'magenta',
+            'lime'
+        ]
+        const colorDiv = document.querySelectorAll('.color');
+        colorDiv.forEach((div, index) => {
+            div.style.backgroundColor = color[index];
+            div.addEventListener('click', () => {
+                document.body.style.backgroundColor = color[index];
+            })
+        })
+    </script>
+</html>
