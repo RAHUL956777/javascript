@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <body></body>
+  <script>
+    const div = document.createElement("div");
+    const ul = document.createElement("ul");
+
+    for (let i = 1; i <= 9; i++) {
+      var li = document.createElement("li");
+
+      li.textContent = `Element-${i}`;
+      ul.appendChild(li);
+      li.style.padding = "1rem";
+      li.style.cursor = "pointer";
+      li.style.fontSize = "1.3rem";
+      li.addEventListener("mousemove", (e) => {
+        e.target.style.color = "white";
+      });
+      li.addEventListener("mouseout", (e) => {
+        e.target.style.color = "black";
+      });
+    }
+
+    div.appendChild(ul);
+
+    // styling of that div
+    document.body.appendChild(div);
+    div.style.height = "10vh";
+    div.style.width = "100vw";
+    div.style.display = "flex";
+    div.style.flexDirection = "row";
+    div.style.alignItems = "center";
+    div.style.justifyContent = "center";
+    div.style.backgroundColor = "gray";
+
+    // ul styling
+    ul.style.display = "flex";
+    ul.style.padding = "1rem";
+    ul.style.listStyle = "none";
+
+    const secondDiv = document.createElement("div");
+    document.body.appendChild(secondDiv);
+    secondDiv.style.height = "90vh";
+    secondDiv.style.width = "100vw";
+    secondDiv.style.display = "flex";
+    secondDiv.style.flexDirection = "column";
+    secondDiv.style.alignItems = "center";
+    secondDiv.style.justifyContent = "center";
+    secondDiv.style.backgroundColor = "#333333";
+
+    secondDiv.innerHTML = `<h1 style='color:white; font-size:50px;'>This page is under construction</h1>`;
+    const containerDiv = document.createElement("div");
+    secondDiv.appendChild(containerDiv);
+    containerDiv.style.height = "50vh";
+    containerDiv.style.width = '50vh'
+    containerDiv.style.backgroundColor="green"
+    containerDiv.style.marginTop = '20px'
+    containerDiv.style.display = "flex";
+    containerDiv.style.flexDirection = "column";
+    containerDiv.style.alignItems = "center";
+    containerDiv.style.justifyContent = "center";
+
+
+    const imgDiv = document.createElement("div");
+    const textDiv = document.createElement("div");
+    containerDiv.appendChild(imgDiv, textDiv);
+    // img div styling here
+    imgDiv.style.height = "50%";
+    imgDiv.style.width = "100%";
+    imgDiv.style.backgroundColor = "red";
+
+    // text div styling here
+    imgDiv.style.height = "50%";
+    imgDiv.style.width = "100%";
+    imgDiv.style.backgroundColor = "yellow";
+
+  </script>
+</html>
