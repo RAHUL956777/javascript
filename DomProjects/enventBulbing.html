@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling Example</title>
+</head>
+<body>
+  <div id="container">
+    <button id="myButton">Click me!</button>
+  </div>
+
+  <script>
+    // Get the button element
+    const button = document.getElementById('myButton');
+
+    // Add a click event listener to the button
+    button.addEventListener('click', function(event) {
+      alert('Button Clicked (Bubbling Phase)');
+    });
+
+    // Add a click event listener to the container div
+    const container = document.getElementById('container');
+    container.addEventListener('click', function(event) {
+      alert('Container Clicked (Bubbling Phase)');
+    });
+
+    // Add a click event listener to the document
+    document.addEventListener('click', function(event) {
+      alert('Document Clicked (Bubbling Phase)');
+    });
+  </script>
+</body>
+</html>
