@@ -24,7 +24,7 @@ function User (userName,loginCount,isLoggedIn){
 
     return this;
 }
-
+ 
 const user1 = new User("rahul", 18, true);
 console.log(user1);
 
